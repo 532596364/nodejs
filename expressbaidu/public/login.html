@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>前端面试题目</title>
+	<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+	<div class="container baImg">
+		<!-- 登入框 -->
+		<div class="form_center ">
+			<!-- 登入框左侧 -->
+			<div class="login_logo col-sm-5 hidden-xs">
+				<span>企业logo</span>
+			</div>
+			<!-- 登入框右侧 -->
+			<form class="form-horizontal  col-sm-7 col-xs-12" role="form" >
+				  <h2 class="title">管理系统登入</h2>
+				  <!-- 账号 -->
+				  <div class="form-group has-primary ">
+				    <label class="control-label col-sm-3 col-xs-3" for="username">账&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+				    <div class="col-sm-9 col-xs-9">
+				      <input type="text" class="form-control" id="username">
+				    </div>
+				  </div>
+				  <!-- 密码 -->
+				  <div class="form-group has-primary ">
+				    <label class="control-label col-sm-3 col-xs-3" for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+				    <div class="col-sm-9 col-xs-9">
+				      <input type="password" class="form-control" id="password">
+				    </div>
+				  </div>
+				  <!-- 验证码 -->
+				  <div class="form-group has-primary ">
+				    <label class="control-label col-sm-3 col-xs-3" for="roll">验证码</label>
+				    <div class="col-sm-4 col-xs-9">
+				      <input type="text" class="form-control" id="roll">
+				    </div>
+				    <div class="col-sm-3 col-sm-offset-0 col-xs-5 col-xs-offset-3">
+				      <span class="roll">1111</span>
+				    </div>
+				    <div class="col-sm-2 col-xs-4 ">
+				      <span class="change"><a href="">换一张</a></span>
+				    </div>
+				  </div>
+				  <!-- 按钮 -->
+				  <div class="btn_group">
+				  	<button type="submit" id="submit" class="btn  col-sm-4 col-sm-offset-3 col-xs-12">登入</button>
+				  	<button type="reset" class="btn col-sm-4 col-sm-offset-1 col-xs-12">重置</button>
+				  </div>  
+			</form>
+		</div>	
+	</div>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

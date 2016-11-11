@@ -1,0 +1,165 @@
+
+
+/*********顶部导航的样式部分修改与补充****/
+.navbar {
+    border-radius: 0;
+    border: 0;
+}
+.navbar-inverse {
+    background-color: #474f5c;
+    border-color: #080808;
+}
+.navbar,
+.navbar-header{
+	height: 70px;
+}
+
+
+/*logo*/
+.navbar-header>a{
+	padding: 10px;
+}
+.navbar>.container-fluid>.navbar-header{
+	margin-left: 20px;
+}
+.navbar-header>a img{
+	height:50px;
+}
+/*登入按钮*/
+.btn_login{
+	color: #fff;
+}
+.navbar-btn {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+#logout{
+	display: none;
+}
+/*********左侧导航的样式部分修改与补充****/
+.content{
+	padding: 0;
+	margin-top:-20px;
+}
+/*.content div{
+	padding: 0;
+}*/
+#nav_left{
+	background: #666d7d;
+	margin-bottom: -999px;
+	padding-bottom: 999px;
+	overflow-y: hidden;
+}
+.nav-pills>li>a{
+	border-radius: 0;
+	color: #eee;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #2fd1aa;
+}
+.nav-pills>li>a:hover{
+	color: #fff;
+    background-color: #474f5c;
+}
+.nav-pills>li>a:focus{
+	color: #fff;
+    background-color: #2fd1aa;
+}
+.nav_left>.nav{
+	margin-top: 20px;
+}
+.nav_left>.nav>li{
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	text-align: center;
+	position: relative;
+}
+
+.nav_left>.nav>li>a>span{
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 24px;
+	line-height: 43px;
+}
+.nav_left>.nav>li:nth-child(1)>a>span{
+	font-size: 28px;
+}
+.nav_left>.nav>li:nth-child(2)>a>span{
+	line-height: 33px;
+}
+.nav_left>.nav>li>a>i{
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 12px;
+	line-height: 43px;
+}
+
+/************下拉菜单************/
+.nav_active>ul{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: none;
+}
+
+/***************内容区域***********/
+.content_box h2{
+	font-size: 16px;
+	text-indent: 30px;
+	color: #666;
+}
+h2 .iconfont{
+	font-size: 14px;
+	margin: 0 15px;
+}
+h2 .iconfont:nth-child(1){
+	font-size: 20px;
+	margin: 0 15px;
+}
+
+.hidden_b{
+	display: none;
+}
+
+@media  (max-width: 768px) {
+	.navbar,
+	.navbar-header{
+		height: 50px;
+	}
+	.navbar>.container-fluid>.navbar-header{
+		margin-left: 0;
+	}
+	.navbar-header>a img{
+		height:30px;
+	}
+	.navbar-btn {
+	    margin-top: 8px;
+	    margin-bottom: 8px;
+	}
+	.navbar-header>a.btn{
+		padding: 0;
+		height: 32px;
+		line-height: 32px;
+		float: right;
+		padding: 0 20px 0 0;
+	}
+	#nav_left{
+		background: #666d7d;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		overflow-y: auto;
+	}
+	#nav_left.nav_hide{
+		display: none;
+	}
+	.hidden_b{
+		display: block;
+	}
+}

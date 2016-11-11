@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+	<title>百度新闻</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="font/iconfont.css" />
+	<link rel="stylesheet" href="css/news.css" />
+	
+</head>
+<body>
+	<div class="container">
+		<header class="cf">
+			<a href="https://m.baidu.com/">
+				<span class="iconfont">&#xe7df;</span>
+			</a>
+			<a href="#">
+				<span class="iconfont">&#xe607;</span>
+			</a>
+			<a href="#">
+				<span class="iconfont">&#xf000c;</span>
+			</a>
+			<a href="#">
+				<span class="iconfont">&#xf002d;</span>
+			</a>
+			
+		</header>
+		<nav>
+			<ul class="mainMenu">
+				<li><a href="#">精选</a><i></i></li>
+				<li><a href="#">百家</a><i></i></li>
+				<li><a href="#">本地</a><i></i></li>
+				<li><a href="#">娱乐</a><i></i></li>
+				<li><a href="#">社会</a><i></i></li>
+				<li><a href="#">军事</a></li>
+				<li><a href="#">女人</a><i></i></li>
+				<li><a href="#">高校</a><i></i></li>
+				<li><a href="#">互联网</a><i></i></li>
+				<li><a href="#">科技</a><i></i></li>
+				<li><a href="#" class="more">更多</a><span class="iconfont arrow_more">&#xe63e;</span></li>
+				<li><a href="#">生活</a></li>
+				<li><a href="#">国际</a><i></i></li>
+				<li><a href="#">国内</a><i></i></li>
+				<li><a href="#">体育</a><i></i></li>
+				<li><a href="#">汽车</a><i></i></li>
+				<li><a href="#">财经</a><i></i></li>
+				<li><a href="#">房产</a></li>
+				<li><a href="#">时尚</a><i></i></li>
+				<li><a href="#">教育</a><i></i></li> 
+				<li><a href="#">游戏</a><i></i></li>
+				<li><a href="#">旅游</a><i></i></li>
+				<li><a href="#">人文</a><i></i></li>
+				<li><a href="#">创意</a></li>
+			</ul>
+			<ul class="btmMenu" style="display: none;">
+			    <li><a href="#">记者榜</a><i></i></li>
+			    <li><a href="#">媒体榜</a><i></i></li>
+			    <li class="set_order"><a href="#" >删除及排序</a></li>
+			    <li>&nbsp;</li>
+			    <li><a href="#" class="less">收起</a><span class="iconfont arrow_more">&#xe62d;</span></li>
+			</ul>
+
+		</nav>
+		<article class="news-main">
+			<ul class="news-lists">
+				<li class="news-list">
+					<div class="newsimg">
+						<img src="http://t11.baidu.com/it/u=354147694,677665572&fm=170&s=21501A6E2C88197402C8B48203&w=218&h=146&img.JPEG" alt="">
+					</div>
+					<div class="newscontent">
+						<h1>美团控股爱鲜蜂，O2O社区电商已经成为巨头间的游戏</h1>
+						<p>
+							<span class="newstime">2小时前</span>
+							<span class="newssrc">搜狐要闻</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</article>
+	</div>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+	<script>
+		$(document).ready(function () {
+			var devicewidth = $('body').width();
+
+			$("nav .mainMenu li").each(function (inde,item) {
+				if ($(this).find('a').html().split("").length>2) {
+					$(this).width(devicewidth/3);
+				}else{
+					$(this).width(devicewidth/6);
+				}
+			});
+			$("nav .btmMenu li").each(function (inde,item) {
+					if ($(this).hasClass("set_order")) {
+						$(this).width(devicewidth/3);
+					}else{
+						$(this).width(devicewidth/6);
+					}			
+			});
+		})
+	</script>
+	<script type="text/javascript" src="js/news.js"></script>
+</body>
+</html>

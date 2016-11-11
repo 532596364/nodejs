@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>后台管理系统</title>
+	<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/icon/iconfont.css">
+	<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+	<!-- 导航 -->
+	<nav class="navbar navbar-inverse navbar-fix-top" role="navigation">
+	  <div class="container-fluid">
+	  	<!-- logo -->
+	    <div class="navbar-header  hidden-xs">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" src="img/logo.png" >
+	      </a>
+	    </div>
+	    <div class="navbar-header hidden_b">
+	    	 <a class="navbar-brand" href="#">
+		        <img alt="Brand" src="img/logo.png" >
+		     </a>
+		     <!-- <a href="" id="login_info" class="btn navbar-btn navbar-right btn_login">登入</a> -->
+
+			<button class="navbar-toggle collapsed" type="button" id="nav_left_in">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		    </button>
+		    
+		</div>
+	    <!-- 登入按钮 -->
+	    <a href="" id="logout" class="btn navbar-btn navbar-right btn_login" >登出</a>
+	    <a href="" id="login_info" class="btn navbar-btn navbar-right btn_login hidden-xs">登入</a>
+		<!-- 登入后样式，后续写了js实现 -->
+	    <ul class="nav navbar-nav navbar-right" style="display:none">
+	        <li><a href="#">退出</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">name <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	          </ul>
+	        </li>
+	    </ul>
+	  </div>
+	</nav>
+	<!-- 主要内容部分 -->
+	<div class="container-fluid content">
+		<!-- 左侧导航 -->
+		<div class="col-sm-3 nav_left  col-xs-12 nav_hide" id="nav_left">
+			<ul class="nav nav-pills nav-stacked" role="tablist">
+			  <!-- 首页 -->
+			  <li role="presentation" ><a href="#">
+			  	<span class="iconfont">&#xe604;</span>首页<i class="iconfont"></i></a>
+			  </li>
+			  <!-- 教研中心 -->
+			  <li role="presentation"  class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe60c;</span>教研中心<i class="iconfont">&#xe60f;</i></a>
+				<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">职业方向</a></li>
+			  		<li role="presentation"><a href="#">毕业设计设置</a></li>
+			  		<li role="presentation"><a href="#">毕业设计辅导</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 教务中心 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe634;</span>教务中心<i class="iconfont">&#xe60f;</i></a>
+				<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">班级管理</a></li>
+			  		<li role="presentation"><a href="#">招生管理</a></li>
+			  		<li role="presentation"><a href="#">学院管理</a></li>
+			  		<li role="presentation"><a href="#">假期管理</a></li>
+			  		<li role="presentation"><a href="#">直播管理</a></li>
+			  		<li role="presentation"><a href="#">公告</a></li>
+			  		<li role="presentation"><a href="#">常见问题</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 助教审核 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe647;</span>助教审核<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">助教申请</a></li>
+			  		<li role="presentation"><a href="#">新手培训</a></li>
+			  		<li role="presentation"><a href="#">我的任务</a></li>
+			  		<li role="presentation"><a href="#">试批审核</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 教辅中心 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe62e;</span>教辅中心<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">全部作业</a></li>
+			  		<li role="presentation"><a href="#">我的作业</a></li>
+			  		<li role="presentation"><a href="#">紧急作业</a></li>
+			  		<li role="presentation"><a href="#">未批改作业</a></li>
+			  		<li role="presentation"><a href="#">实时未批作业</a></li>
+			  		<li role="presentation"><a href="#">作业加价</a></li>
+			  		<li role="presentation"><a href="#">任务进阶</a></li>
+			  		<li role="presentation"><a href="#">评价列表</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 财务管理 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe605;</span>财务管理<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">钱包</a></li>
+			  		<li role="presentation"><a href="#">订单管理</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 统计分析 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe629;</span>统计分析<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">职业方向</a></li>
+			  		<li role="presentation"><a href="#">毕业设计设置</a></li>
+			  		<li role="presentation"><a href="#">毕业设计辅导</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 公开课 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe666;</span>公开课<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 咨询中心 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe6ea;</span>咨询中心<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 账户管理 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe602;</span>账户管理<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  	</ul>
+			  </li>
+			  <!-- 社区管理 -->
+			  <li role="presentation" class="nav_active"><a href="#">
+			  	<span class="iconfont">&#xe661;</span>社区管理<i class="iconfont">&#xe60f;</i></a>
+			  	<ul class="nav nav-pills nav-stacked nav_int" role="tablist">
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  		<li role="presentation"><a href="#">...</a></li>
+			  	</ul>
+			  </li>
+			</ul>
+		</div>
+		<!-- 右侧内容 -->
+		<div class="col-sm-9 col-xs-12 content_box">
+			<h2><span class="iconfont">&#xe657;</span>首页<span class="iconfont">&#xe65a;</span>百度新闻</h2>
+			<hr/>
+			<!-- 内容 -->
+			<div class="container-fluid content">
+			    <div class="row">
+			    	<div class="col-md-12 col-sm-12">
+			    		<div class="panel panel-default">
+						    <div class="panel-heading">
+						    	<h3 class="panel-title">新闻编辑</h3>
+						  	</div>
+						  	<div class="panel-body">
+							   <form role="form" id="newform">
+								  	<div class="form-group">
+									    <label for="newstitle">新闻标题</label>
+									    <input type="text" class="form-control" id="newstitle" placeholder="请输入新闻标题" >
+								  	</div>
+								  	<div class="form-group">
+									    <label for="newstype">新闻类型</label>
+									    <select class="form-control" id="newstype">
+											<option>精选</option>
+											<option>百家</option>
+											<option>本地</option>
+											<option>娱乐</option>
+											<option>社会</option>
+											<option>军事</option>
+											<option>女人</option>
+											<option>高校</option>
+											<option>互联网</option>
+											<option>科技</option>
+										</select>
+								  	</div>
+								  	<div class="form-group">
+									    <label for="newsimg">新闻图片</label>
+									    <input type="text" class="form-control" id="newsimg" placeholder="请输入新闻标题">
+								  	</div>
+								  	<div class="form-group">
+									    <label for="newstime">新闻时间</label>
+									    <input type="datetime-local" class="form-control" id="newstime" ">
+								  	</div>
+								  	<div class="form-group">
+									    <label for="newssrc">新闻图片</label>
+									    <input type="text" class="form-control" id="newssrc" placeholder="请输入新闻来源">
+								  	</div>
+								  	<button type="submit" class="btn btn-primary" id="btnsb">提交新闻</button>
+								</form>
+						  	</div>
+						</div>
+			    	</div>
+			    	<!-- 新闻列表 -->
+			    	<div class="col-md-12 col-sm-12">
+			    		<div class="panel-heading">
+						    <h3 class="panel-title">新闻列表</h3>
+						</div>
+						<div class="panel-body">
+							<table class="table" id="newstable">
+								<thead>
+									<tr>
+										<td>id</td>
+										<td>类型</td>
+										<td>新闻标题</td>
+										<td>新闻时间</td>
+										<td>操作</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>精选</td>
+										<td>美团控股爱鲜蜂，O2O社区电商已经成为巨头间的游戏</td>
+										<td>2小时前</td>
+										<td>
+											<button class="btn btn-primary btn-xs">编辑</button>
+											<button class="btn btn-danger btn-xs">删除</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+			    </div>
+			</div>
+			<!-- 模态框delete-->
+			<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"  aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+						    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						    <h4 class="modal-title">警告</h4>
+						</div>
+						<div class="modal-body">
+						    删除无法恢复
+						</div>
+						<div class="modal-footer">
+						    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						    <button type="button" class="btn btn-primary" id="confirmDelete">确认</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 模态框update-->
+			<div class="modal fade" id="updateModal" tabindex="-1" role="dialog"  aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+						    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						    <h4 class="modal-title">警告</h4>
+						</div>
+						<div class="modal-body">
+							<form role="form">
+							  	<div class="form-group">
+								    <label for="newstitle">新闻标题</label>
+								    <input type="text" class="form-control" id="u_newstitle" placeholder="请输入新闻标题">
+							  	</div>
+							  	<div class="form-group">
+								    <label for="newstype">新闻类型</label>
+								    <select class="form-control" id="u_newstype">
+										<option>精选</option>
+										<option>百家</option>
+										<option>本地</option>
+										<option>娱乐</option>
+										<option>社会</option>
+										<option>军事</option>
+										<option>女人</option>
+										<option>高校</option>
+										<option>互联网</option>
+										<option>科技</option>
+									</select>
+							  	</div>
+							  	<div class="form-group">
+								    <label for="newsimg">新闻图片</label>
+								    <input type="text" class="form-control" id="u_newsimg" placeholder="请输入新闻标题">
+							  	</div>
+							  	<div class="form-group">
+								    <label for="newstime">新闻时间</label>
+								    <input type="datetime-local" class="form-control" id="u_newstime" ">
+							  	</div>
+							  	<div class="form-group">
+								    <label for="newssrc">新闻图片</label>
+								    <input type="text" class="form-control" id="u_newssrc" placeholder="请输入新闻来源">
+							  	</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+						    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						    <button type="button" class="btn btn-primary" id="confirmUpdate">确认</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/lang.js"></script>
+	<script src="js/admin.js"></script>
+	<script>
+		$(document).ready(function () {
+			//导航点击
+			$('.nav_active').click(function() {
+			$('.nav_active.active').removeClass('active');
+			$(this).addClass('active');
+			$('.nav_active.active>ul').slideToggle("slow");
+			});
+			$('#nav_left_in').click(function () {
+				var  nav_left = $("#nav_left");
+				if (nav_left.hasClass("nav_hide")) {
+					nav_left.removeClass("nav_hide");
+				}else{
+					nav_left.addClass("nav_hide");
+				}
+			
+				// if ($(this).css("background-color") != "transparent") {
+				// 	$(this).css("background-color","transparent");
+				// }
+			});	
+		})
+			
+	</script>
+</body>
+</html>
